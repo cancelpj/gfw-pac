@@ -1,3 +1,5 @@
+gallery.vsassets.io
+gallerycdn.vsassets.io
 google.com.hk
 ent.com
 youtube.com
