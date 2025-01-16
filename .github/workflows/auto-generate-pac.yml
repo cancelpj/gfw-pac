@@ -2,8 +2,10 @@ name: Auto Generate PAC File
 
 on:
   schedule:
-    - cron: '10 0 * * 4'
+    - cron: '10 1 * * 4'
   push:
+    branches:
+      - cancelpj-patch-1
     paths:
       - 'gfw-pac.py'
       - 'pac-template'
@@ -19,6 +21,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: 'cancelpj-patch-1' # 明确指定检出 cancelpj-patch-1 分支
 
       - name: Check if gfw.pac is in the commit
         id: check-file
@@ -46,7 +50,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add -A
           git commit -a -m "${commit_message}"
-          git push
+          git push origin HEAD:cancelpj-patch-1 # 明确指定将更改推送到 cancelpj-patch-1 分支
 
       - name: Trigger Auto-Release
         if: env.file-exists == 'false'
