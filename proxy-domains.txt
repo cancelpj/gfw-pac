@@ -1,6 +1,4 @@
 github.com
-gallery.vsassets.io
-gallerycdn.vsassets.io
 wallhaven.cc
 google.com.hk
 ent.com
