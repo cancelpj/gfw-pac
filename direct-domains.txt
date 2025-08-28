@@ -1,3 +1,4 @@
+nuget.org
 api.trae.ai
 storeedgefd.dsx.mp.microsoft.com
 gov.cn
