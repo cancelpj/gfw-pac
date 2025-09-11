@@ -1,3 +1,6 @@
+edge.microsoft.com
+settings.visualstudio.microsoft.com
+nuget.cdn.azure.cn
 nuget.org
 api.trae.ai
 storeedgefd.dsx.mp.microsoft.com
